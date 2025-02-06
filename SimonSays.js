@@ -33,21 +33,21 @@ function levelUp() {
     gameSeq.push(randColor);
     console.log(gameSeq);
     gameFlash(randomBtn);
-    
+
 }
 
-function setHighScore(level){
+function setHighScore(level) {
     // localStorage.clear()
-    const user = JSON.parse(localStorage.getItem("user"));
+    const highScore = localStorage.getItem("highScore");
     // console.log(user)
-    if(user==null || level > user.highScore){
+    if (highScore == null || level > highScore) {
         let inp;
-        if(isNameSet){
-           inp = prompt("Congrats! You break High Score, Enter Your name");
-           isNameSet = false;
+        if (isNameSet) {
+            inp = prompt("Congrats! You break High Score, Enter Your name");
+            isNameSet = false;
+            localStorage.setItem("Name", inp);
         }
-        const user = {"highScore":level,"Name":inp}
-        localStorage.setItem("user",JSON.stringify(user));
+        localStorage.setItem("highScore", level);
     }
 }
 
@@ -64,8 +64,9 @@ function checkAns(idx) {
             document.body.style.backgroundColor = "white";
         }, 200);
 
-        const user = JSON.parse(localStorage.getItem("user"));
-        h2.innerHTML = `Game Over! Your score was <b>${level}<b> <br> High Score is ${user.highScore} <br>Created by ${user.Name} <br>Press Any Key to Start.`;
+        const highScore = localStorage.getItem("highScore");
+        const Name = localStorage.getItem("Name");
+        h2.innerHTML = `Game Over! Your score was <b>${level}<b> <br> High Score is ${highScore} <br>Created by ${Name} <br>Press Any Key to Start.`;
         reset();
     }
 }
