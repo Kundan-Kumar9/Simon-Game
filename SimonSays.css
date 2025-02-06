@@ -1,40 +1,53 @@
-body{
+body {
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.btn{
-    height: 200px;
-    width: 200px;
+.btn {
+    display: flex;
+    height: 150px;
+    width: 150px;
     border-radius: 20%;
     border: 10px solid black;
-    margin: 2rem;
+    margin: 0.5rem;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: center;
 }
 
-.red{
-    background-color:#d95980 ;
+.line-one {
+    display: flex;
+    flex-direction: column;
 }
 
-.yellow{
+.line-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.red {
+    background-color: #d95980;
+}
+
+.yellow {
     background-color: #f99b45;
 }
 
-.green{
+.green {
     background-color: #63aac0;
 }
 
-.purple{
+.purple {
     background-color: #819ff9;
 }
 
-.flash{
+.flash {
     background-color: white;
 }
 
-.userflash{
+.userflash {
     background-color: green;
 }
