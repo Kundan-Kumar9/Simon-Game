@@ -10,7 +10,7 @@ let isNameSet = true;
 
 let h2 = document.querySelector("h2");
 
-document.addEventListener("keypress", () => {
+document.addEventListener("click", () => {
     if (started == false) {
         console.log("Game is started");
         started = true;
