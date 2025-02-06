@@ -10,11 +10,10 @@ let isNameSet = true;
 
 let h2 = document.querySelector("h2");
 
-document.addEventListener("click", () => {
+document.addEventListener("click", (e) => {
     if (started == false) {
         console.log("Game is started");
         started = true;
-
         levelUp();
     }
 })
@@ -85,7 +84,8 @@ function userFlash(btn) {
     }, 170);
 }
 
-function btnPress() {
+function btnPress(e) {
+    e.stopPropagation();
     let btn = this;
     // console.log(this);
     userFlash(btn);
