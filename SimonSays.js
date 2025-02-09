@@ -21,7 +21,7 @@ document.addEventListener("click", (e) => {
 function levelUp() {
     userSeq = [];
     level++;
-    setHighScore(level);
+    // setHighScore(level);
     // let highScore = gameSeq.length;
     // console.log(highScore);
     h2.innerText = `Level ${level}`;
@@ -62,7 +62,7 @@ function checkAns(idx) {
         setTimeout(function () {
             document.body.style.backgroundColor = "white";
         }, 200);
-
+        setHighScore(level);
         const highScore = localStorage.getItem("highScore");
         const Name = localStorage.getItem("Name");
         h2.innerHTML = `Game Over! Your score was <b>${level}<b> <br> High Score is ${highScore} <br>Created by ${Name} <br>Press Any Key to Start.`;
