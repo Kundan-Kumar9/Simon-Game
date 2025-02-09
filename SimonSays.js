@@ -65,7 +65,7 @@ function checkAns(idx) {
         setHighScore(level);
         const highScore = localStorage.getItem("highScore");
         const Name = localStorage.getItem("Name");
-        h2.innerHTML = `Game Over! Your score was <b>${level}<b> <br> High Score is ${highScore} <br>Created by ${Name} <br>Press Any Key to Start.`;
+        h2.innerHTML = `Game Over! Your score is <b>${level}<b> <br> High Score is ${highScore} <br>Created by ${Name} <br>Press Any Key to Start.`;
         reset();
     }
 }
